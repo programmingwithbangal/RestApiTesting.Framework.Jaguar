@@ -3,11 +3,6 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CreatePosts - Copy.feature.cs" />
-    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UpdatePosts - Copy.feature.cs" />
-    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UpdatePostsBodi - Copy.feature.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.6.0" />
     <PackageReference Include="Flurl" Version="2.8.2" />
     <PackageReference Include="Flurl.Http" Version="2.4.2" />
@@ -25,33 +20,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
   <ItemGroup>
-    <Compile Update="Features\CreatePosts.feature.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>CreatePosts.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\DeletePosts.feature.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>DeletePosts.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetPosts.feature.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>GetPosts.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\PatchPosts.feature.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>PatchPosts.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\UpdatePosts.feature.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>UpdatePosts.feature</DependentUpon>
-    </Compile>
     <Compile Update="Helpers\InitializeHelper.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -59,30 +28,9 @@
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <None Update="config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Features\CreatePosts.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CreatePosts.feature.cs</LastGenOutput>
-    </None>
-    <None Update="Features\DeletePosts.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DeletePosts.feature.cs</LastGenOutput>
-    </None>
-    <None Update="Features\GetUsers.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>GetUsers.feature.cs</LastGenOutput>
-    </None>
-    <None Update="Features\PatchPosts.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>PatchPosts.feature.cs</LastGenOutput>
-    </None>
-    <None Update="Features\UpdatePosts.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>UpdatePosts.feature.cs</LastGenOutput>
     </None>
     <None Update="Images\fluentassertions.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
